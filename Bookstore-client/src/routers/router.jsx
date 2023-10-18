@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         path: "/book/:id",
         element: <SingleBook />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/book/${params.id}`),
+          fetch(import.meta.env.VITE_BASE_SERVER_URL + `/book/${params.id}`),
       },
     ],
   },
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
         path: "/sell/dashboard/edit-books/:id",
         element: <EditBooks />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/book/${params.id}`),
+          fetch(import.meta.env.VITE_BASE_SERVER_URL + `/book/${params.id}`),
       },
     ],
   },

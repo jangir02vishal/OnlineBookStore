@@ -6,13 +6,13 @@ import { BsCheckLg } from "react-icons/bs";
 const ManageBooks = () =>{
     const [allBooks, setAllBooks] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/all-books").then(res => res.json()).then(data => setAllBooks(data));
+        fetch(import.meta.env.VITE_BASE_SERVER_URL+ "/all-books").then(res => res.json()).then(data => setAllBooks(data));
     },[])
 
     // Remove a book
     const handleRemove = (id) =>{
         
-        fetch(`http://localhost:5000/book/${id}`,{
+        fetch(import.meta.env.VITE_BASE_SERVER_URL + `/book/${id}`,{
             method: "DELETE"
         }).then(res => res.json()).then(data => alert("Book is removed sucessfully."));
     }

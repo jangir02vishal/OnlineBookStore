@@ -13,12 +13,12 @@ const Shop = () => {
     const searchby = queryParams.get('search');
 
     if(searchby){
-      fetch("http://localhost:5000/all-books?search="+searchby)
+      fetch(import.meta.env.VITE_BASE_SERVER_URL + "/all-books?search="+searchby)
       .then((res) => res.json())
       .then((data) => setbooks(data));
     }
     else{
-      fetch("http://localhost:5000/all-books")
+      fetch(import.meta.env.VITE_BASE_SERVER_URL + "/all-books")
       .then((res) => res.json())
       .then((data) => setbooks(data));
     }

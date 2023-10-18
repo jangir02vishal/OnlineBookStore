@@ -15,27 +15,6 @@ const PrivateRoute = ({ childern }) => {
     );
   }
 
-//   let getAuth = async () => {
-//     const localData = JSON.parse(localStorage.getItem("data"));
-//     if (localData) {
-//       let res = await axios.get(
-//         import.meta.env.VITE_BASE_SERVER_URL + "/authenticate",
-//         {
-//           headers: {
-//             token: localData.jwtToken,
-//           },
-//         }
-//       );
-
-//       // .then((res) => {
-//       console.log(res);
-//       if (res.data.status === 202) {
-//         setUser(localData);
-//       }
-//       // });
-//     }
-//   };
-//   let isJWT = getAuth()
 
   console.log(user);
 
