@@ -12,7 +12,7 @@ import ManageBooks from "../dashboard/ManageBooks";
 import EditBooks from "../dashboard/EditBooks";
 import Signup from "../components/Signup";
 import Login from "../components/Login";
-import PrivateRoute from "../privateRoute/privateRoute";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Logout from "../components/Logout";
 import Cart from "../cart/Cart";
 
